@@ -1,0 +1,47 @@
+---
+layout: post
+title: 寻找莱娜：“互联网第一夫人”背后的故事
+date: 2011-08-26 18:19
+comments: true
+categories: Essay
+---
+
+“莱娜图”恐怕是互联网历史上影响最深远的图片。早在70年代，南加州大学的工程师们就把这张图片用于图像处理研究中。这些研究工作为JPEG和MPEG标准的出现奠定了基础。这些技术被用于阿帕网（ARPANET）——万维网（WWW）的前身。
+
+莱娜图其实是1972年11月号《花花公子》杂志上的一张插图的一部分。大约是在1973年的六月或七月，南加州大学信号与图像处理研究所的研究员们匆忙地寻找一副高质量的图片用于学术论文。他们希望找到一副动态范围很好的人脸图像。正好这时，一位没有被载入史册的研究员带着一本《花花公子》走了进来。大家使用一台Muirhead扫描仪将扫描范围定位在插图上部5.12英寸，扫描得到了这张512 × 512的图像。在扫描后，有人发现由于软件错误，这张图片缺少了一行像素，而且，由于数模转换器的计时错误，这张图片被轻微地纵向拉长。由于时间紧迫，他们没有重新扫描这张图片。于是，这张略有瑕疵的图片就这样流传下来了。从这时起。这张花花公子玩伴的图像被广泛地用在工业领域，成为了数字图像传输和处理的标准测试图。
+
+![Lenna Process](http://i.minus.com/ibjRKAPL1z8ral.jpg)
+
+<!-- more -->
+
+可以说，在过去的几十年中，在图像和电子通信领域没有哪张图片能比莱娜图更重要。今天，神秘的莱娜已经被公认为“互联网第一夫人”。想当年，工程师们只是为了学术论文而扫描了这张图片，没有想到她竟会产生如此大的影响。“其他人向我们索要这张图像，因为他们想要使用同样的测试图来比较自己的图像处理和压缩算法。”尽管过去了这么多年，数字扫描仪取代了早期的磁带存储介质，512行标准测试仍然被用于保证图片质量的同时降低比特率。
+
+有意思的是，花花公子宣称那一期的杂志是有史以来销量最高的，共计卖出7,161,516份。
+
+下面说说图中的人Lena Söderberg，她是1972年《花花公子》的Miss November，后来回到瑞典，结了婚，生了3个小孩。直到1988年才知道自己的插页照片早已成为实验室里的小白鼠。莱娜之于研究者心目中的地位，就如丽塔·海华丝在二战时期之于美国士兵心中的地位。1997年，在图像科学学会50周年会议上，她被邀为嘉宾出席。
+
+David C. Munson，《IEEE图像处理汇刊》的主编，是这么解释莱娜图在科研领域流行的原因：
+
+> 首先，该图片很好的包含了平坦区域，阴影，纹理等细节，这些都有益于测试各种不同的图像处理算法。这是一幅很好的测试照片！其次，由于这是一个非常有魅力的女人的照片，因此图像处理研究行业（多数由男性组成）倾向于使用一张他们认为很有吸引力的图片也不令人惊奇。
+
+这里甚至有一首献给莱娜的十四行诗，作者已不可考：
+
+> O dear Lena, your beauty is so vast  
+It is hard sometimes to describe it fast.  
+I thought the entire world I would impress  
+If only your portrait I could compress.  
+Alas! First when I tried to use VQ  
+I found that your cheeks belong to only you.  
+Your silky hair contains a thousand lines  
+Hard to match with sums of discrete cosines.  
+And for your lips, sensual and tactual  
+Thirteen Crays found not the proper fractal.  
+And while these setbacks are all quite severe  
+I might have fixed them with hacks here or there  
+But when filters took sparkle from your eyes  
+I said, "Heck with it. I'll just digitize."  
+
+![Lenna Top](http://i.minus.com/iVw5lBriVXJsn.jpg)
+
+很少有人见过完整的原图，猛击[这里](http://www.lenna.org/full/l_hires.jpg)可以看到原图。警告，18岁以下未成年人请确定身后没有家长！
+
