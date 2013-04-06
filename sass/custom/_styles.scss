@@ -61,13 +61,23 @@ body>nav li+li:before {
 }
 
 article blockquote {
-  font-family: $quote;
+  font-family: $kai;
   font-style: normal;
+  strong {
+    font-family: $sans;
+  }
+  &:lang(en) {
+    font-family: $italic;
+    font-style: italic;
+    strong {
+      font-family: $italic;
+    }
+  }
 }
 
 em, dfn {
   font-style: normal;
-  font-family: $em;
+  font-family: $emphasis;
 }
 
 sup {
@@ -79,3 +89,7 @@ sup {
     margin: .5em 0;
   }
 }
+
+// #content .blog-index footer {
+//   font-family: $sans;
+// }
