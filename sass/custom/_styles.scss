@@ -78,6 +78,10 @@ article blockquote {
 em, dfn {
   font-style: normal;
   font-family: $emphasis;
+  &:lang(zh) {
+    font-family: $kai;
+    font-style: normal;
+  }
 }
 
 sup {
@@ -89,7 +93,3 @@ sup {
     margin: .5em 0;
   }
 }
-
-// #content .blog-index footer {
-//   font-family: $sans;
-// }
