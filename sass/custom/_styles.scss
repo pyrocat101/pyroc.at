@@ -78,7 +78,7 @@ article blockquote {
 em, dfn {
   font-style: normal;
   font-family: $emphasis;
-  &:lang(zh) {
+  &[lang='zh'] {
     font-family: $kai;
     font-style: normal;
   }
