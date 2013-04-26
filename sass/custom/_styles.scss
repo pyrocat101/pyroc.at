@@ -76,6 +76,7 @@ article blockquote {
 }
 
 em, dfn {
+  color: black;
   font-style: normal;
   font-family: $emphasis;
   &[lang='zh'] {
