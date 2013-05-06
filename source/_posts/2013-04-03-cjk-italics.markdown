@@ -10,7 +10,7 @@ categories: Tech
 
 作为一个广为人知的误解，人们常常认为「斜体」就是「基准线向右倾斜的字体」，其实不然[^misuse]。「斜体」特指为了加快书写速度而字母略微向右倾斜的一种手写书法风格，而「基准线向右倾斜的字体」，即上面提到的「伪斜体」，仅仅是对*罗马体*西文字母做向右倾斜变换。
 
-Donald Knuth在他的著作「The TeXbook」中写道：
+Donald Knuth在他的著作「$$\rm The\ \TeX book$$」中写道：
 
 > Slanted type is essentially the same as roman, but the letters are slightly
 > skewed, while the letters in italic type are drawn in a **different** style.
