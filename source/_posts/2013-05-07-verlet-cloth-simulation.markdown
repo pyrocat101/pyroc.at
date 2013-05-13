@@ -138,7 +138,7 @@ if distance < MOUSE_TEAR_SIZE then p.links = []
 
 *P.S. 如果觉得卡，请降低`CONSTRAINT_ACCURACY`的值。*{:lang='zh'}
 
-{% jsfiddle 7KeaR result,js,html,css default 570px %}
+{% codepen CkEmG metaphysiks result 570 %}
 
 ## 参考
 
