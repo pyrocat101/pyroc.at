@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://eval.im
-title: Eval::Index
+url: http://pyroc.at
+title: Pyroc.at
 subtitle:
-author: metaphysiks
+author: pyrocat
 simple_search: http://google.com/search
 description:
 
