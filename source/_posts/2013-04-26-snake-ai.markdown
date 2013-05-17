@@ -14,7 +14,7 @@ categories: Tech
 
 于是为了<del>一雪以前被贪吃蛇虐的前耻</del>研究如何用程序实现同样的效果，我动手写了一个[基于HTML Canvas的贪吃蛇游戏和AI][my-snake-ai]。
 
-[my-snake-ai]: http://metaphysiks.github.io/snake-ai/
+[my-snake-ai]: http://pyrokat.github.io/snake-ai/
 
 <!-- more -->
 
@@ -30,7 +30,7 @@ categories: Tech
 
 观察gif图中贪吃蛇的风骚走位，我们会发现它并非总是选择最短路径到达食物，并且蛇在游戏晚期会很有前瞻性地迂回扫过地图，不让蛇身围住某个区域导致难以处理的小孔。这两个观察，也许可以作为未来改进贪吃蛇AI的启发。
 
-目前游戏+AI的源码也就200来行（再赞CoffeeScript的简洁），源码[在此](https://github.com/metaphysiks/snake-ai)。
+目前游戏+AI的源码也就200来行（再赞CoffeeScript的简洁），源码[在此](https://github.com/pyrokat/snake-ai)。
 
 [^hawstein]: [如何用Python写一个贪吃蛇AI](http://hawstein.com/posts/snake-ai.html)
 

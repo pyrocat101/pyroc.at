@@ -176,4 +176,4 @@ LogoScript是动态类型的语言，支持函数的定义、递归以及常见�
 
 [1]: http://coffeescript.org
 [2]: http://en.wikipedia.org/wiki/Abstract_syntax_tree
-[3]: https://github.com/metaphysiks/LogoScript
+[3]: https://github.com/pyrokat/LogoScript
