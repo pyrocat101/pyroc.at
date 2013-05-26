@@ -88,7 +88,8 @@ Multics项目最终实现了所有的目标。不过在1969年，项目却落后
 同样的道理也适用于Unix。尽管始于至简，Unix以极快的速度累计了大量垃圾基因。举例来说吧，很难找到一个版本的Unix不带有Linotronic或Imagen排字机的驱动程序，尽管只有极少数Unix用户知道这些机器长什么样子。正如Olin Shivers观察到的，Unix最初的进化压力已经减轻，菌株有如脱缰野马。
 
 > Date: Wed, 10 Apr 91 08:31:33 EDT  
-> From: Olin Shivers <shivers@bronto.soar.cs.cmu.edu> To: UNIX-HATERS  
+> From: Olin Shivers <shivers@bronto.soar.cs.cmu.edu>  
+> To: UNIX-HATERS  
 > Subject: Unix evolution  
 >
 > 我来分享一些关于Unix在贝尔实验室诞生以来的一般进化过程（这里使用了不严谨的术语）的想法。我认为可以如下表述：
