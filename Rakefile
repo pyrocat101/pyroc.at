@@ -4,18 +4,21 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "ding@zeroomega.info"
-ssh_port       = "8086"
+ssh_user       = ""
+ssh_port       = ""
 document_root  = "~/blog/"
 rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
+s3_bucket      = "pyroc.at"
+asset_bucket   = "i.pyroc.at"
+deploy_default = "s3"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "master"
 
 ## -- Misc Configs -- ##
 
+image_dir       = "images"
 public_dir      = "public"    # compiled site directory
 source_dir      = "source"    # source file directory
 blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
@@ -220,6 +223,7 @@ task :deploy do
   end
 
   Rake::Task[:copydot].invoke(source_dir, public_dir)
+  Rake::Task["s3_image"].execute
   Rake::Task["#{deploy_default}"].execute
 end
 
@@ -380,4 +384,20 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+s3_flags = "--acl-public --reduced-redundancy --exclude '.DS_Store'"
+
+desc "Deploy website via s3cmd"
+task :s3 do
+  puts "## Deploying website via s3cmd"
+  # Deal with font
+  ok_failed system("s3cmd sync #{s3_flags} --exclude '*.*' --include 'fonts/*' --add-header='Cache-Control: max-age=31536000, public' #{public_dir}/* s3://#{s3_bucket}/")
+  ok_failed system("s3cmd sync #{s3_flags} --delete-removed #{public_dir}/* s3://#{s3_bucket}/")
+end
+
+desc "Deploy images via s3cmd"
+task :s3_image do
+  puts "## Syncing images via s3cmd"
+  ok_failed system("s3cmd sync #{s3_flags} #{image_dir}/* --add-header='Cache-Control: max-age=31536000, public' s3://#{asset_bucket}/")
 end

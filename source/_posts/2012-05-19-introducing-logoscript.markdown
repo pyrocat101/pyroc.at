@@ -21,7 +21,7 @@ for (x = 1; x <= 150; x++) {
 }
 ```
 
-![spiral](http://i.minus.com/iPPRhJoG4v37z.png)
+![spiral](http://i.pyroc.at/logoscript-spiral.png)
 
 ### Hypotrochoid
 
@@ -35,7 +35,7 @@ for (i = 0; i < 36; i++) {
 }
 ```
 
-![hypotrochoid](http://i.minus.com/iKH8vlJuxyeo4.png)
+![hypotrochoid](http://i.pyroc.at/logoscript-hypotrochoid.png)
 
 ### Spinning Squares
 
@@ -76,7 +76,7 @@ rt(6);
 spinSquare(340);
 ```
 
-![spinning-squares](http://i.minus.com/ibiMgVVGngyFVT.png)
+![spinning-squares](http://i.pyroc.at/logoscript-spinning-squares.png)
 
 ### Tree
 
@@ -110,7 +110,7 @@ pd();
 tree(85);
 ```
 
-![tree](http://i.minus.com/iQ7AWBMiUQiuG.png)
+![tree](http://i.pyroc.at/logoscript-tree.png)
 
 ### Twisted Roses
 
@@ -143,13 +143,13 @@ for (angle = 0; angle < 360; angle++) {
 //}
 ```
 
-![twisted-7](http://i.minus.com/i7riH9Bu93AfQ.png)
+![twisted-7](http://i.pyroc.at/logoscript-rose-7.png)
 
 修改twist的值可以得到不同的玫瑰曲线，比如为5和为6的时候分别如下：
 
-![twisted-5](http://i.minus.com/ib0u1XleXD1JKt.png)
+![twisted-5](http://i.pyroc.at/logoscript-rose-5.png)
 
-![twisted-6](http://i.minus.com/irHFXA8nYJm0h.png)
+![twisted-6](http://i.pyroc.at/logoscript-rose-6.png)
 
 <!-- more -->
 
