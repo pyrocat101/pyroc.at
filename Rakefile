@@ -10,7 +10,6 @@ document_root  = "~/blog/"
 rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 s3_bucket      = "pyroc.at"
-asset_bucket   = "i.pyroc.at"
 deploy_default = "s3"
 
 # This will be configured for you when you run config_deploy
@@ -223,7 +222,6 @@ task :deploy do
   end
 
   Rake::Task[:copydot].invoke(source_dir, public_dir)
-  Rake::Task["s3_image"].execute
   Rake::Task["#{deploy_default}"].execute
 end
 
@@ -386,18 +384,11 @@ task :list do
   puts "(type rake -T for more detail)\n\n"
 end
 
-s3_flags = "--acl-public --reduced-redundancy --exclude '.DS_Store'"
 
 desc "Deploy website via s3cmd"
 task :s3 do
+  s3_flags = "--acl-public --reduced-redundancy --exclude '.DS_Store'"
   puts "## Deploying website via s3cmd"
-  # Deal with font
-  ok_failed system("s3cmd sync #{s3_flags} --exclude '*.*' --include 'fonts/*' --add-header='Cache-Control: max-age=31536000, public' #{public_dir}/* s3://#{s3_bucket}/")
+  ok_failed system("s3cmd sync #{s3_flags} --exclude '*.*' --include 'images/*' --include 'fonts/*' --add-header='Cache-Control: max-age=31536000, public' #{public_dir}/* s3://#{s3_bucket}/")
   ok_failed system("s3cmd sync #{s3_flags} --delete-removed #{public_dir}/* s3://#{s3_bucket}/")
-end
-
-desc "Deploy images via s3cmd"
-task :s3_image do
-  puts "## Syncing images via s3cmd"
-  ok_failed system("s3cmd sync #{s3_flags} #{image_dir}/* --add-header='Cache-Control: max-age=31536000, public' s3://#{asset_bucket}/")
 end

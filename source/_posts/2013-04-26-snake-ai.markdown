@@ -10,7 +10,7 @@ categories: Tech
 
 [^snake-reddit]: [A mesmerizing game of Snake [GIF]](http://www.reddit.com/r/woahdude/comments/1bycra/a_mesmerizing_game_of_snake_gif/)
 
-![snake-gif](http://i.pyroc.at/russian-snake.gif)
+![snake-gif](/images/2013/04/russian-snake.gif)
 
 于是为了<del>一雪以前被贪吃蛇虐的前耻</del>研究如何用程序实现同样的效果，我动手写了一个[基于HTML Canvas的贪吃蛇游戏和AI][my-snake-ai]。
 
@@ -24,7 +24,7 @@ categories: Tech
 
 由于AI将追随尾部作为优先级最高的任务，因此理论上这个贪吃蛇AI永远不会撞死。可是这个AI在实测中占满地图中绝大部分格子后很容易陷入追逐自己尾巴的无限循环。比如：
 
-![snake-loop](http://i.pyroc.at/snake-loop.png)
+![snake-loop](/images/2013/04/snake-loop.png)
 
 图中剩下了几个不会被填上的小孔，分为两种情况：一是若蛇头选择填孔，会把自己引入死路；二是由于选择最长路径的算法相对与蛇的状态有很强的确定性，导致永远不会选择能够填孔的路线。不管是哪种情况，蛇都会为了陷入追逐尾部的无限循环。
 

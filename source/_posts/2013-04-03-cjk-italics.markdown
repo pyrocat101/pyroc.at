@@ -46,7 +46,7 @@ em {
 
 效果：
 
-![CJK/Western](http://i.pyroc.at/cjk-italics-dabblet.png)
+![CJK/Western](/images/2013/04/cjk-italics-dabblet.png)
 
 ## 参考
 
