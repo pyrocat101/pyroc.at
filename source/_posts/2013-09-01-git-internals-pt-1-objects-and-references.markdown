@@ -48,7 +48,7 @@ b14df6442ea5a1b382985a6549b85d435376c351  -
 
 因此我只要知道文件的内容，就可以计算出对象的路径：`.git/objects/<校验值前2位>/<校验值后38位>`。就算多个文件内容相同，Git也只会在`.git/objects`下存一份对象。
 
-不过你无法直接查看这些对象的内容——它们都被压缩过了。不过你可以借助`zlib`过滤一下：
+不过你无法直接查看这些对象的内容——它们都被压缩过了。可以借助`zlib`过滤一下：
 
 ``` bash
 $ alias zpipe="perl -MCompress::Zlib -e 'undef $/; print uncompress(<>)'"
@@ -75,19 +75,24 @@ $ find .git/objects -type f
 这里会输出3个对象的路径，其中应该有一个是`.git/objects/d1/90eda3a45fd0d1682ff5bd94ece3cc5ab1ce25`。因为如下数据：
 
 ```
-"tree" SP "33" NUL "10644 1.txt" NUL 0x b14df6442ea5a1b382985a6549b85d435376c351
+"tree" SP "33" NUL "10644 1.txt" NUL 0xb14df6442ea5a1b382985a6549b85d435376c351
 ```
 
 的校验值是d190eda3a45fd0d1682ff5bd94ece3cc5ab1ce25。验证一下：
 
 ``` bash
-$ git cat-file -p d190eda3a45fd0d1682ff5bd94ece3cc5ab1ce25
-100644 blob b14df6442ea5a1b382985a6549b85d435376c351	1.txt
 $ cat .git/objects/d1/90eda3a45fd0d1682ff5bd94ece3cc5ab1ce25 | zpipe | sha1sum
 d190eda3a45fd0d1682ff5bd94ece3cc5ab1ce25  -
 ```
 
-这样的对象就是tree。它是一个表，表中每一行有文件类型、文件名、对象类型和对象校验值这些信息。我们的例子中，100644表示一个`1.txt`是一个常规文件，它的内容由校验值为b14df6442ea5a1b382985a6549b85d435376c351的blob对象存储。当然了，每一行记录的也可以是其他的文件类型，比如符号链接和目录。如果是目录的话，那一行将是指向另一个tree对象的校验值。
+用`git cat-file`命令来查看比较直观：
+
+```
+$ git cat-file -p d190eda3a45fd0d1682ff5bd94ece3cc5ab1ce25
+100644 blob b14df6442ea5a1b382985a6549b85d435376c351	1.txt
+```
+
+这样的对象就是tree。它是一个表，表中每一行有文件类型、文件名、对象类型和对象校验值这些信息。我们的例子中，100644表示一个`1.txt`是一个常规文件，它的内容由校验值为b14df6442ea5a1b382985a6549b85d435376c351的blob对象存储。当然了，每一行记录的也可以是其他的文件类型，比如符号链接和目录。如果是目录的话，那一行将包含指向另一个tree对象的校验值。
 
 ### Commit
 
@@ -128,7 +133,7 @@ $ cat .git/refs/heads/master
 210ef855816fb85d12966dbacd640dab9dfca1ff
 ```
 
-它指向了首次创建的commit对象。下次在master分支上创建新的commit时，Git会为你更新`.git/refs/heads/master`为新commit的校验值。因此，每个分支本质上是一个会自动更新的引用。
+它指向了首次创建的commit对象。下次在master分支上创建新的commit时，Git会更新`.git/refs/heads/master`指向新的commit。因此，每个分支本质上是一个会自动更新的引用。
 
 ### HEAD
 
