@@ -5,6 +5,10 @@
   display: none;
 }
 
+html {
+  text-rendering: optimizeLegibility;
+}
+
 body>header {
   background: none;
   h1, h2 {
