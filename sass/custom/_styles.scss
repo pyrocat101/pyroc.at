@@ -69,14 +69,16 @@ article blockquote {
   font-style: normal;
   font-size: 1.1em;
   strong {
-    font-family: $sans;
+    font-weight: normal;
+    // font-family: $sans;
   }
   &:lang(en) {
     font-family: $italic;
     font-style: italic;
-    strong {
-      font-family: $italic;
-    }
+    // strong {
+    //   font-weight: normal;
+    //   font-family: $italic;
+    // }
   }
 }
 

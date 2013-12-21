@@ -62,14 +62,14 @@ $header-subtitle-font-family: $sans;
 	font-style: normal;
 	font-weight: normal;
 }
-@font-face {
-	font-family: "Western Emphasis";
-	src: local('HoeflerText-BoldItalic'),
-         local("HoeflerText-BlackItalic"),
-         url(http://themes.googleusercontent.com/static/fonts/crimsontext/v3/4j4TR-EfnvCt43InYpUNDLz7bF_NE717IFsea40dLmU.woff) format('woff');
-	font-style: normal;
-	font-weight: bold;
-}
+// @font-face {
+// 	font-family: "Western Emphasis";
+// 	src: local('HoeflerText-BoldItalic'),
+//          local("HoeflerText-BlackItalic"),
+//          url(http://themes.googleusercontent.com/static/fonts/crimsontext/v3/4j4TR-EfnvCt43InYpUNDLz7bF_NE717IFsea40dLmU.woff) format('woff');
+// 	font-style: normal;
+// 	font-weight: bold;
+// }
 
 $kai: "Kaiti SC", STKaiti, Kaiti, "AR PL UKai", serif;
 $italic: "Hoefler Text", "Crimson Text", serif;

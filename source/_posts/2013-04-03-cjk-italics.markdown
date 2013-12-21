@@ -14,7 +14,7 @@ Donald Knuth在他的著作《$$\rm The\ \TeX book$$》中写道：
 
 > Slanted type is essentially the same as roman, but the letters are
 > slightly skewed, while the letters in italic type are drawn in a
-> **different** style.
+> different style.
 {:lang='en'}
 
 那么根据这个定义，中文字体中是否有对应于西文斜体的风格？在我看来，答案是肯定的。我们定义一个西文字体是不是斜体，最主要看是不是有手写风格在里面。换句话说，我们要寻找的是一种用不同风格书写的书法字体。在中文语境中，一个最为广泛使用，且满足上述条件的候选字就是：*楷体*。
